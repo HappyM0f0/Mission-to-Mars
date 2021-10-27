@@ -7,17 +7,17 @@
     <title>Mission to Mars</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
 
   </head>
-  <body >
+  <body class="container bg-dark text-white" >
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
+      <div class="jumbotron bg-secondary text-center text-light">
         <h1>Mission to Mars</h1>
+        <p></p>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-primary btn-lg text-light" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
       <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
@@ -39,6 +39,7 @@
             src="{{mars.featured_image }}"
             class="img-responsive"
             alt="Responsive image"
+            style="max-width:95%;"
           />
         </div>
         <div class="col-xs-6 col-md-4">
@@ -54,18 +55,20 @@
 
     </div>
      <!-- Mars Hemispheres -->
-    <div class="container-fluid" style="max-width:65%;">
-        <h1 class="text-center"><strong>Hemispheres of Mars</strong></h1>
+    <div class="container-fluid" style="max-width:85%;">
+        <h1 class="text-center">
+          <hr />
+          <strong>Hemispheres of Mars</strong></h1>
         <br>
-        <div class="card">
+        <div class="card bg-secondary">
           <hr>
-          <div class="col-md-12">
+          <div class="col-md-12 ">
             <div class="row" id="mars-hemispheres">
                 {% for hemisphere in mars.hemispheres %}
                 <div class="col-md-6">
                     <div class="card">
                         <img class="card-img-top" src="{{hemisphere.img_url}}" alt="..." style="max-height: 100%; max-width:100%;">
-                        <div class="card-body">
+                        <div class="card-body bg-secondary">
                             <h4 class="card-text text-center">{{hemisphere.title}}</h4>
                         </div>
                     </div>
