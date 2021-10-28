@@ -1,7 +1,9 @@
 # Mission-to-Mars
  
 ## Overview
+web-scraping project to get the latest news and updates with the click of a button.
 
+using: Splinter, MonogoDB
 ## Results
 
 ## Summary
